@@ -1,0 +1,124 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  top: 20%;
+  left: 50%;
+  position: absolute;
+  color: #fff;
+  font-size: 60px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+p {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.button {
+  top: 41%;
+  left: 50%;
+  width: 140px;
+  padding: 16px 10px 16px 10px;
+  text-align: center;
+  position: absolute;
+  display: block;
+  transform: translateX(-50%);
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  border: 3.5px solid #fff;
+  border-radius: 5px;
+  white-space: no-wrap;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.right {
+  right: 0;
+  background: url('img/heli.jpg') center;/*Photo by Matheus Bertelli from Pexels*/
+  background-size: cover;
+}
+
+.split.right .button:hover {
+  background-color: rgba(103, 145, 157, 0.3);
+}
+
+.split.right:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.split.left {
+  left: 0;
+  background: url('img/plane.jpg') center center no-repeat;/* Photo by Matheus Bertelli from Pexels*/
+  background-size: cover;
+}
+
+.split.left .button:hover {
+  background-color: rgba(205, 164, 132, 0.3);
+}
+
+.split.left:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hover-left .left {
+  width: 75%;
+}
+
+.hover-left .right {
+  width: 25%;
+}
+
+.hover-left .right:before {
+  z-index: 2;
+}
+
+.hover-right .right {
+  width: 75%;
+}
+
+.hover-right .left {
+  width: 25%;
+}
+
+.hover-right .left:before {
+  z-index: 2;
+}
+
+.split.left, .split.right, .split.left:before, .split.right:before {
+  transition: 1000ms all ease-in-out;
+}
+
+@media(max-width: 800px) {
+  h1 {
+    font-size: 30px;
+  }
+  .button {
+    width: 45px;
+  }
+}
